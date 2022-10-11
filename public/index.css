@@ -1,0 +1,30 @@
+.strip {
+    height: 500px;
+    width: 100%;
+    background-image: url(pexels-ann-h-1888000.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+
+@media (min-width:2000px) {
+    .strip {
+        height: 700px;
+    }
+}
+@media (min-width:1600px) {
+    .strip {
+        height: 600px;
+    }
+}
+@media (max-width:620px) {
+    .strip {
+        height: 400px;
+        background-size: contain;
+        background-image: url(smallpexels-ann-h-1888000.jpg);
+    }
+}
+
+

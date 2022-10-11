@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toys Project</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="index.css">
+
+
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Api Toy</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#UsersGuide">Users Routes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#ToysGuide">Toys Routes</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="strip"></div>
+    <!-- main  -->
+
+
+
+    <main class="container-fluid mt-5 ">
+        <!-- Guide  -->
+        <div class="container">
+            <div>
+                <h1 id="UsersGuide">Users Guide</h1>
+            </div>
+            <p>
+
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt incidunt provident omnis neque vel
+                consequatur
+                nulla illo, a veritatis, dolore quia. Commodi reprehenderit corrupti aperiam similique neque quae,
+                exercitationem iste, nam optio, quam nobis modi aliquid! Voluptates ab vero explicabo nihil itaque,
+                facere
+                tenetur voluptatum laborum hic quod cumque dolores illo ipsum consectetur libero exercitationem
+                quibusdam
+            </p>
+
+
+        </div>
+        <!-- Guide end  -->
+        <!--Users  -->
+        <div class="container-md my-3">
+            <div>
+                <h1 id="Users">Users Routes</h1>
+            </div>
+            <div class="table-responsive">
+
+                <table class="table ">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Method</th>
+                            <th scope="col">URL</th>
+                            <th scope="col">Body</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>post</td>
+                            <td>toys-api.onrender.com/users</td>
+                            <td>
+                                <code> { "name":"ben5 shirom",
+                             <br> "email":"ben5@gmail.com",
+                                 "password":"123456" }</code>
+                            </td>
+                            <td>Sign Up retrun data of user. required: email must be unqie, password minimum 6 chars,
+                                username minimum 2.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>post</td>
+                            <td>toys-api.onrender.com/users/login</td>
+                            <td><code>{ "email":"ben5@gmail.com",
+                                 "password":"123456" }</code>
+                            </td>
+                            <td>User login retrun token (expired in 60min). required: email must be unqie, password
+                                minimum 6 chars.</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" class="text-center text-bg-info text fw-bold ">must send token</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>get</td>
+                            <td>toys-api.onrender.com/users/myInfo</td>
+                            <td>none</td>
+                            <td>Get user data only by validate token.</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Users end  -->
+        <!-- Guide  -->
+        <div class="container">
+            <div>
+                <h1 id="ToysGuide">Toys Guide</h1>
+            </div>
+            <section>
+
+                With these "GET" requests you can get information about toys.
+                By adding these parameters you can edit the equest : <br>
+                 perPage - selecting the amount of objects on the page.
+                 <br> page - selecting the amount of pages. 
+                 <br>  sort - selecting sorting subject (price,category,id,name).
+                 <br> reverse - change the sort dirction.
+                 <br>
+                 <br> By logging in you can add, edit  and remove yours toys.
+                
+
+               
+            </section>
+        </div>
+        <!-- Guide end  -->
+        <!-- Toys -->
+        <div class="container-md my-3">
+            <div>
+                <h1 id="Toys">Toys Routes</h1>
+            </div>
+            <div class="table-responsive">
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Method</th>
+                            <th scope="col">URL</th>
+                            <th scope="col">Body</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>get</td>
+                            <td><a href="/toys">toys-api.onrender.com/toys</a></td>
+                            <td>none</td>
+                            <td>get 10 toys. </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>get</td>
+                            <td><a href="/toys/search?s=ball">toys-api.onrender.com/toys/search?s={name}</a></td>
+                            <td>none</td>
+                            <td>Search toys by name or info get 10 toys.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>get</td>
+                            <td><a href="/toys/category/sea">toys-api.onrender.com/toys/category/{category name}</a>
+                            </td>
+                            <td>none</td>
+                            <td>get 10 toys by category name.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>get</td>
+                            <td><a
+                                    href="/toys/prices?min=70&max=200">toys-api.onrender.com/toys/prices?min=70&max=200</a>
+                            </td>
+                            <td>none</td>
+                            <td>get 10 toys by price can use with min & max or one of them. </td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" class="text-center text-bg-info text fw-bold ">must send token</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>post</td>
+                            <td>toys-api.onrender.com/toys</td>
+                            <td> <code>{ "name":"bal11",
+                                <br> "info":"fff",
+                                <br> "category":"sport",
+                                <br> "img":"football.jpg" ,
+                                <br> "price":100 }
+                            </code>
+                            </td>
+                            <td>Add toy only img is not required </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>put</td>
+                            <td>toys-api.onrender.com/toys/{id of the toy}</td>
+                            <td><code>{ "name":"bal11",
+                                <br> "info":"fff",
+                                <br> "category":"sport",
+                                <br> "img":"football.jpg" ,
+                                <br> "price":100 }
+                            </code>
+                            </td>
+                            <td>Edit toy only if you created the toy </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">7</th>
+                            <td>delete</td>
+                            <td>toys-api.onrender.com/toys/{id of the toy}</td>
+                            <td> none</td>
+                            <td>Delete toy only if you created the toy </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Toys end -->
+
+    </main>
+    <!-- main end -->
+    <!-- footer -->
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center ms-4">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                <svg class="bi" width="30" height="24">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-muted">© 2022 Company, Inc</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex  me-5">
+            <li class="ms-3"><a class="text-muted" target="_blank" href="https://github.com/benshirom"><i
+                        class="bi bi-github"></i>
+                </a></li>
+            <li class="ms-3"><a class="text-muted" target="_blank" href="https://www.linkedin.com/in/ben-shirom"><i
+                        class="bi bi-linkedin"></i>
+                </a></li>
+            <li class="ms-3"><a class="text-muted" target="_blank"
+                    href="https://api.whatsapp.com/send?phone=9720527222768&amp;text=%D7%94%D7%99%D7%99%20%D7%91%D7%9F%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%93%D7%A8%D7%9A%20%D7%94%D7%90%D7%AA%D7%A8"><i
+                        class="bi bi-whatsapp"></i>
+                </a></li>
+        </ul>
+    </footer>
+    <!-- footer end -->
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
