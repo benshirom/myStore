@@ -15,7 +15,7 @@ exports.userCtrl={
       },
       deleteUser: async(req,res) => {
         try{
-          let delId = req.params.delId;
+          let delId = req.query.delId;
           let userInfo;
           
           if(req.tokenData.role == "admin"){
