@@ -87,7 +87,7 @@
                         <tr>
                             <th scope="row">1</th>
                             <td>post</td>
-                            <td>toys-api.onrender.com/users</td>
+                            <td>/users</td>
                             <td>
                                 <code> { "name":"ben5 shirom",
                              <br> "email":"ben5@gmail.com",
@@ -99,7 +99,7 @@
                         <tr>
                             <th scope="row">2</th>
                             <td>post</td>
-                            <td>toys-api.onrender.com/users/login</td>
+                            <td>/users/login</td>
                             <td><code>{ "email":"ben5@gmail.com",
                                  "password":"123456" }</code>
                             </td>
@@ -112,23 +112,23 @@
                         <tr>
                             <th scope="row">3</th>
                             <td>get</td>
-                            <td>toys-api.onrender.com/users/myInfo</td>
+                            <td>/users/myInfo</td>
                             <td>none</td>
                             <td>Get user data only by validate token.</td>
                         </tr>
                         <tr>
                             <th scope="row">4</th>
                             <td>get</td>
-                            <td>toys-api.onrender.com/users/usersList</td>
+                            <td>/users/usersList</td>
                             <td>none</td>
                             <td>Get all users data only by admin validate token.</td>
                         </tr>
                         <tr>
                             <th scope="row">5</th>
                             <td>Delete</td>
-                            <td>toys-api.onrender.com/users <br> <b>or</b>  toys-api.onrender.com/users?delId={id} </td>
+                            <td> /users?delId={id} </td>
                             <td>none</td>
-                            <td>Delete user by his own validate token <b>or</b> id user and dmin validate token </td>
+                            <td>Delete user  </td>
                         </tr>
 
                     </tbody>
@@ -143,7 +143,7 @@
             </div>
             <section>
                 With these <b> "GET"</b> requests you can get information about toys.
-                By adding these parameters you can edit the equest : <br>
+                By adding these <b> qs</b> you can edit the equest : <br>
                 <b>perPage</b> - selecting the amount of objects on the page.
                 <br> <b>page</b> - selecting the amount of pages.
                 <br> <b>sort</b>- selecting sorting subject (price,category,id,name).
@@ -177,21 +177,21 @@
                         <tr>
                             <th scope="row">1</th>
                             <td>get</td>
-                            <td><a href="/toys">toys-api.onrender.com/toys</a></td>
+                            <td><a href="/toys">/toys</a></td>
                             <td>none</td>
                             <td>get 10 toys. </td>
                         </tr>
                         <tr>
                             <th scope="row">2</th>
                             <td>get</td>
-                            <td><a href="/toys/search?s=ball">toys-api.onrender.com/toys/search?s={name}</a></td>
+                            <td><a href="/toys/search?s=ball">/toys/search?s={name}</a></td>
                             <td>none</td>
                             <td>Search toys by name or info get 10 toys.</td>
                         </tr>
                         <tr>
                             <th scope="row">3</th>
                             <td>get</td>
-                            <td><a href="/toys/category/sea">toys-api.onrender.com/toys/category/{category name}</a>
+                            <td><a href="/toys/category/sea">/toys/category/{category name}</a>
                             </td>
                             <td>none</td>
                             <td>get 10 toys by category name.</td>
@@ -200,7 +200,7 @@
                             <th scope="row">4</th>
                             <td>get</td>
                             <td><a
-                                    href="/toys/prices?min=70&max=200">toys-api.onrender.com/toys/prices?min=70&max=200</a>
+                                    href="/toys/prices?min=70&max=200">/toys/prices?min=70&max=200</a>
                             </td>
                             <td>none</td>
                             <td>get 10 toys by price can use with min & max or one of them. </td>
@@ -211,7 +211,7 @@
                         <tr>
                             <th scope="row">5</th>
                             <td>post</td>
-                            <td>toys-api.onrender.com/toys</td>
+                            <td>/toys</td>
                             <td> <code>{ "name":"bal11",
                                 <br> "info":"fff",
                                 <br> "category":"sport",
@@ -224,7 +224,7 @@
                         <tr>
                             <th scope="row">6</th>
                             <td>put</td>
-                            <td>toys-api.onrender.com/toys/{id of the toy}</td>
+                            <td>/toys/{id of the toy}</td>
                             <td><code>{ "name":"bal11",
                                 <br> "info":"fff",
                                 <br> "category":"sport",
@@ -237,7 +237,7 @@
                         <tr>
                             <th scope="row">7</th>
                             <td>delete</td>
-                            <td>toys-api.onrender.com/toys/{id of the toy}</td>
+                            <td>/toys/{id of the toy}</td>
                             <td> none</td>
                             <td>Delete toy only if you created the toy </td>
                         </tr>

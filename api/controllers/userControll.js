@@ -15,13 +15,18 @@ exports.userCtrl={
       },
       deleteUser: async(req,res) => {
         try{
-          let delId = req.query.delId;
+          let delId = req.params.delId;
           let userInfo;
           
           if(req.tokenData.role == "admin"){
-            userInfo = await UserModel.deleteOne({_id:delId});
+            if(req.tokenData._id==delId){
+              userInfo = await UserModel.deleteOne({_id:req.tokenData._id},{password:0});
+            }
+            else{
+              userInfo = await UserModel.deleteOne({_id:delId});
+            }
           }
-          else{
+          else if(req.tokenData._id==delId){
             //,{name:1,email:1}
             userInfo = await UserModel.deleteOne({_id:req.tokenData._id},{password:0});
           }
