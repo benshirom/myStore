@@ -1,6 +1,5 @@
 const { UserModel } = require("../models/userModel");
 
-
 exports.userCtrl={
    myInfo: async(req,res) => {
         try{

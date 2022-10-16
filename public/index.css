@@ -18,12 +18,27 @@
     .strip {
         height: 600px;
     }
+    
+}
+
+@media (max-width:850px){
+    main{
+        font-size: 0.9em;
+    }
 }
 @media (max-width:620px) {
     .strip {
         height: 400px;
         background-size: contain;
         background-image: url(smallpexels-ann-h-1888000.jpg);
+    }
+    main{
+        font-size: 0.8em;
+    }
+}
+@media (max-width:500px){
+    main{
+        font-size: 0.7em;
     }
 }
 
