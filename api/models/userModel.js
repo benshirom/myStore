@@ -2,7 +2,7 @@ const { string } = require("joi");
 const mongoose = require("mongoose");
 
 let userSchema = new mongoose.Schema({
-  fullname: {
+  fullName: {
     firstName: String,
     lastName: String
   },
