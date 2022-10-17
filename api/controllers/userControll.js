@@ -37,9 +37,17 @@ exports.userCtrl={
         }  
       }
       ,userList:async(req,res) => {
+        let perPage = req.query.perPage || 10;
+        let page = req.query.page || 1;
+        let sort = req.query.sort || "_id"
+        let reverse = req.query.reverse == "yes" ? -1 : 1;
         try{
-          let data = await UserModel.find({},{password:0});
-          res.json(data)
+          let data = await UserModel.find({},{password:0})
+          .limit(perPage)
+          .skip((page - 1)*perPage)
+          .sort({[sort]:reverse})
+          res.json(data);
+          
         }
         catch(err){
           console.log(err)
