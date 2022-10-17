@@ -17,9 +17,7 @@ exports.userCtrl = {
       let userInfo;
 
       if (req.tokenData.role == "admin") {
-          userInfo = await UserModel.deleteOne({ _id: req.delId });
-        
-        
+          userInfo = await UserModel.deleteOne({ _id: delId }, { password: 0 });
       }
       else if (req.tokenData._id == delId) {
         userInfo = await UserModel.deleteOne({ _id: req.tokenData._id }, { password: 0 });
