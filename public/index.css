@@ -1,3 +1,6 @@
+body{
+    background-color: #f6f6f6;
+}
 .strip {
     height: 500px;
     width: 100%;
@@ -7,6 +10,12 @@
 }
 
 
+main a{
+    color: #26a1cb;
+}
+main a:hover{
+    color: black;
+}
 
 
 @media (min-width:2000px) {

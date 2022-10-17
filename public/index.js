@@ -10,3 +10,5 @@ function copydDomain() {
     let copyText = "https://myapi.cyclic.app/"
     navigator.clipboard.writeText(copyText);
 }
+
+
