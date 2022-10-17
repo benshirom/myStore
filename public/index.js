@@ -1,12 +1,12 @@
-document.querySelector("#domainbtn1").addEventListener("click",()=>{
-    copydDomain(); 
+document.querySelector("#domainbtn1").addEventListener("click", () => {
+    copydDomain();
 })
-document.querySelector("#domainbtn2").addEventListener("click",()=>{
-    copydDomain(); 
+document.querySelector("#domainbtn2").addEventListener("click", () => {
+    copydDomain();
 })
 
 
 function copydDomain() {
-    let copyText = document.getElementById("Domain");
-    navigator.clipboard.writeText(copyText.innerHTML);
-  }
+    let copyText = "https://myapi.cyclic.app/"
+    navigator.clipboard.writeText(copyText);
+}
