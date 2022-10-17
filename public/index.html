@@ -44,20 +44,21 @@
         </nav>
     </header>
 
-    <div  class="strip"></div>
+    <div class="strip"></div>
     <!-- main  -->
     <main id="UsersGuide" class="container-fluid pt-5  ">
         <!-- Guide  -->
         <div class="container  mb-3">
             <div class="mb-5">
-                <h1  class="text-center ">Users Guide</h1>
+                <h1 class="text-center ">Users Guide</h1>
             </div>
             <p>
-                Through these requests it is possible to <b>register</b> and <b>connect</b> and receive the user's personal information.
+                Through these requests it is possible to <b>register</b> and <b>connect</b> and receive the user's
+                personal information.
                 admin can delete users or himself by id and user can delete himself.
                 admin can get all users list info and use <b>queries</b> to edit the result (perPage,page,sort,reverse).
             </p>
-          
+
 
         </div>
         <!-- Guide end  -->
@@ -72,7 +73,7 @@
                 <table class="table text-center ">
                     <thead>
                         <tr>
-                            <td colspan="5" class="text-center  text fw-bold "> <b>Domain:https://myapi.cyclic.app/</b</td>
+                            <td colspan="5" class="text-center  text fw-bold "> <b>Domain:https://myapi.cyclic.app/</b> <button class="btn mx-2" id="domainbtn1"><i class="bi bi-files"></i></button></td>
                         </tr>
                         <tr class="text-bg-info">
                             <th scope="col">#</th>
@@ -138,9 +139,9 @@
         <!-- Guide  -->
         <div id="ToysGuide" class="container pt-5 mb-3">
             <div class="mb-5">
-                <h1  class="text-center mb-3">Toys Guide</h1>
+                <h1 class="text-center mb-3">Toys Guide</h1>
             </div>
-            <section >
+            <section>
                 With these <b> "GET"</b> requests you can get information about toys.
                 By adding these <b>queries</b> you can edit the request : <br>
                 <ul>
@@ -149,7 +150,7 @@
                     <li><b>sort</b>- selecting sorting subject (price,category,id,name).</li>
                     <li><b>reverse</b> - change the sort dirction.</li>
                 </ul>
-                 By logging in you can add, edit and remove your own toys.
+                By logging in you can add, edit and remove your own toys.
 
             </section>
         </div>
@@ -164,7 +165,10 @@
                 <table class="table text-center ">
                     <thead>
                         <tr>
-                            <td colspan="5" class="text-center  text fw-bold "> <b>Domain:https://myapi.cyclic.app/</b</td>
+                            <td colspan="5" class="text-center  text fw-bold "> <b>Domain : <span
+                                        id="Domain">https://myapi.cyclic.app/</span> </b>
+                                <button class="btn mx-2" id="domainbtn2"><i class="bi bi-files"></i></button>
+                            </td>
                         </tr>
                         <tr class="text-bg-info">
                             <th scope="col">#</th>
@@ -274,6 +278,7 @@
         </ul>
     </footer>
     <!-- footer end -->
+    <script src="index.js"></script>
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
