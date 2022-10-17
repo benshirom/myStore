@@ -105,7 +105,7 @@
                                  "password":"123456" }</code>
                             </td>
                             <td>User login retrun token (expired in 60min). required: email must be unqie, password
-                                minimum 6 chars.</td>
+                                minimum 6 chars. <a class="text-decoration-none " href="https://github.com/benshirom/myStore/blob/master/api/validation/userValidation.js"> for more validtion rules.</a></td>
                         </tr>
                         <tr>
                             <td colspan="5" class="text-center text-bg-info text fw-bold ">must send token</td>
@@ -209,7 +209,7 @@
                             <td><a href="/toys/prices?min=70&max=200">/toys/prices?min=70&max=200</a>
                             </td>
                             <td>none</td>
-                            <td>get 10 toys by price can use with min & max or one of them. </td>
+                            <td>get 10 toys that sorting by price,you can use min & max, <br>  one of them or none to get the range prices you want.</td>
                         </tr>
                         <tr>
                             <td colspan="5" class="text-center text-bg-info text fw-bold ">must send token</td>
@@ -218,34 +218,34 @@
                             <th scope="row">5</th>
                             <td>post</td>
                             <td>/toys</td>
-                            <td> <code>{ "name":"bal11",
-                                <br> "info":"fff",
+                            <td> <code>{ "name":"football",
+                                <br> "info":"football size 6 color black and white",
                                 <br> "category":"sport",
                                 <br> "img":"football.jpg" ,
                                 <br> "price":100 }
                             </code>
                             </td>
-                            <td>Add toy only img is not required </td>
+                            <td>Add toy only img is not required <a class="text-decoration-none " href="https://github.com/benshirom/myStore/blob/master/api/validation/toyValidation.js">for more validtion rules</a> </td>
                         </tr>
                         <tr>
                             <th scope="row">6</th>
                             <td>put</td>
                             <td>/toys/{id of the toy}</td>
-                            <td><code>{ "name":"bal11",
-                                <br> "info":"fff",
+                            <td><code>{ "name":"football",
+                                <br> "info":"football size 5 color black and yellow",
                                 <br> "category":"sport",
                                 <br> "img":"football.jpg" ,
-                                <br> "price":100 }
+                                <br> "price":123 }
                             </code>
                             </td>
-                            <td>Edit toy only if you created the toy </td>
+                            <td>Edit toy only if you created the toy or admin token. <a class="text-decoration-none " href="https://github.com/benshirom/myStore/blob/master/api/validation/toyValidation.js">for more validtion rules</a></td>
                         </tr>
                         <tr>
                             <th scope="row">7</th>
                             <td>delete</td>
                             <td>/toys/{id of the toy}</td>
                             <td> none</td>
-                            <td>Delete toy only if you created the toy </td>
+                            <td>Delete toy only if you created the toy or admin token. </td>
                         </tr>
                     </tbody>
                 </table>
