@@ -45,35 +45,14 @@ exports.toyCtrl = {
     let reverse = req.query.reverse == "yes" ? -1 : 1;
 
     try {
-      let minP = req.query.min;
-      let maxP = req.query.max;
-      if (minP && maxP) {
-        let data = await ToyModel.find({ $and: [{ price: { $gte: minP } }, { price: { $lte: maxP } }] })
-          .limit(perPage)
-          .skip((page - 1) * perPage)
-          .sort({ [sort]: reverse })
-        res.json(data);
-      }
-      else if (maxP) {
-        let data = await ToyModel.find({ price: { $lte: maxP } })
-          .limit(perPage)
-          .skip((page - 1) * perPage)
-          .sort({ [sort]: reverse })
-        res.json(data);
-      } else if (minP) {
-        let data = await ToyModel.find({ price: { $gte: minP } })
-          .limit(perPage)
-          .skip((page - 1) * perPage)
-          .sort({ [sort]: reverse })
-        res.json(data);
-      }
-      else {
-        let data = await ToyModel.find({})
-          .limit(perPage)
-          .skip((page - 1) * perPage)
-          .sort({ [sort]: reverse })
-        res.json(data);
-      }
+      let minP = req.query.min || 0;
+      let maxP = req.query.max || 10000;
+
+      let data = await ToyModel.find({ $and: [{ price: { $gte: minP } }, { price: { $lte: maxP } }] })
+        .limit(perPage)
+        .skip((page - 1) * perPage)
+        .sort({ [sort]: reverse })
+      res.json(data);
     }
     catch (err) {
       console.log(err);
