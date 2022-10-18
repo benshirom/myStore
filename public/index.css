@@ -17,6 +17,10 @@ main a:hover{
     color: black;
 }
 
+main .copybtn:hover{
+background-color: #0dcaf0 !important;
+}
+
 
 @media (min-width:2000px) {
     .strip {
