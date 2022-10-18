@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toys Project</title>
-
+    <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
-
+    <!-- css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
@@ -22,7 +22,6 @@
 
 <body>
     <header>
-
         <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark ">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Api Toy</a>
@@ -45,6 +44,7 @@
     </header>
 
     <div class="strip"></div>
+
     <!-- main  -->
     <main id="UsersGuide" class="container-fluid pt-5  ">
         <!-- Guide  -->
@@ -58,8 +58,6 @@
                 admin can delete users or himself by id and user can delete himself.
                 admin can get all users list info and use <b>queries</b> to edit the result (perPage,page,sort,reverse).
             </p>
-
-
         </div>
         <!-- Guide end  -->
 
@@ -69,16 +67,14 @@
                 <h1 id="Users" class="text-center mb-3">Users Routes</h1>
             </div>
             <div class="table-responsive shadow p-3 mb-5">
-
                 <table class="table text-center ">
                     <thead>
                         <tr>
                             <td colspan="5" class="text-center  text fw-bold "> <b>Domain:https://myapi.cyclic.app/</b>
-                                <button class="btn mx-2 tooltip " id="domainbtn1"><i class="bi bi-files"></i>
+                                <button class="btn mx-2 tooltip " id="domainbtn1">
+                                    <i class="bi bi-files"></i>
                                     <span class=" tooltiptext">copy domain</span>
                                 </button>
-                               
-                                
                             </td>
                         </tr>
                         <tr class="text-bg-info">
@@ -131,7 +127,7 @@
                             <td>get</td>
                             <td>/users/usersList</td>
                             <td>none</td>
-                            <td>Get all users data only by admin validate token,can use queries to edit result. </td>
+                            <td>Get all users data only by admin validate token,can use queries to edit result(perPage,page,sort,reverse). </td>
                         </tr>
                         <tr>
                             <th scope="row">5</th>
@@ -161,8 +157,6 @@
                     <li><b>reverse</b> - change the sort dirction.</li>
                 </ul>
                 By login you can add, edit and remove your own toys, admin can delete and edit all users the toy.
-
-
             </section>
         </div>
         <!-- Guide end  -->
@@ -178,7 +172,8 @@
                         <tr>
                             <td colspan="5" class="text-center  text fw-bold "> <b>Domain :
                                     https://myapi.cyclic.app/</b>
-                                <button class="btn mx-2 tooltip" id="domainbtn2"><i class="bi bi-files"></i>
+                                <button class="btn mx-2 tooltip" id="domainbtn2">
+                                    <i class="bi bi-files"></i>
                                     <span class=" tooltiptext">copy domain</span>
                                 </button>
                             </td>
@@ -268,7 +263,6 @@
             </div>
         </div>
         <!-- Toys end -->
-
     </main>
     <!-- main end -->
     <!-- footer -->
